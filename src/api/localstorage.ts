@@ -62,3 +62,7 @@ export const setData = (data: string) => {
   export const setTitleLocal = (data: string) => {
     localStorage.setItem(TITLE, data);
   };
+  export const removeToken = () => {
+    localStorage.removeItem(TITLE);
+    // return window.location.href = "/";
+  };
