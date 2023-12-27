@@ -138,7 +138,7 @@ function App() {
       {TitleLocal ? (
         <div
           //   ref={parentRef}
-          className="fixed w-full h-full top-0 left-0 z-[9] bg-[rgba(124,149,206,0.12)] backdrop-blur-[8px] flex items-center justify-center shadow-[rgba(0,0,0,0.16)] duration-100 animate-fadeinfast"
+          className="fixed w-full h-full top-0 left-0 z-[9]  bg-gray-400 backdrop-blur-[8px] flex items-center justify-center shadow-[rgba(0,0,0,0.16)] duration-100 animate-fadeinfast"
         >
            <h1 className="text-black hidden md:flex fixed top-[300px]  z-0 font-bold text-gray-400">
             {extractedWord} {`(${listArr.length})`}
@@ -261,7 +261,7 @@ function App() {
               type="text"
               value={message}
               onChange={handleChange}
-              placeholder="Enter your Todo... or  input 'help' for show option"
+              placeholder="Enter your Todo... or 'help' for option"
             />
 
             <button
