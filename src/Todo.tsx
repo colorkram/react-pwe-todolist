@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import {
   getData,
   getTitle,
@@ -20,7 +20,7 @@ function Todo() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [isModalOpenHelp, setIsModalOpenHelp] = React.useState(false);
   const [help, setHelp] = React.useState(false);
-const navi = useNavigate()
+  const navi = useNavigate();
   // const local = getData();
 
   useEffect(() => {
@@ -142,11 +142,16 @@ const navi = useNavigate()
           //   ref={parentRef}
           className="fixed w-screen h-full top-0 left-0 z-[9]  bg-gray-400  backdrop-blur-[8px] flex items-center justify-center shadow-[rgba(0,0,0,0.16)] duration-100 animate-fadeinfast"
         >
-   <button className="bg-gray-500 hover:bg-gray-700 fixed top-[22px] p-2 left-6  rounded" onClick={() => { navi('/') }}>
-  <h1 className=" font-bold text-gray-100">
-    {'Back Home'} {`(${listArr.length})`}
-  </h1>
-</button>
+          <button
+            className="bg-gray-500 hover:bg-gray-700 fixed top-[22px] p-2 left-6  rounded"
+            onClick={() => {
+              navi("/");
+            }}
+          >
+            <h1 className=" font-bold text-gray-100">
+              {"Back Home"} {`(${listArr.length})`}
+            </h1>
+          </button>
 
           {isActive ? (
             <button

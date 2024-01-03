@@ -80,9 +80,9 @@ Exclude 10%: {" "}
 </p>
     </div>
     <div className=" "></div>
-      <div className=" justify-between flex px-10 bg-gray-400 w-full absolute bottom-0">
+    <div className="grid grid-cols-3 gap-4 bg-opacity-30 bg-black w-full absolute bottom-0">
         <button
-          className="bg-gray-200 w-[100px] p-4 m-2 rounded-lg shadow-md"
+          className="bg-gray-200 p-4 m-2 rounded-lg shadow-md"
           onClick={() => {
             navigate("/todo");
           }}
@@ -90,7 +90,15 @@ Exclude 10%: {" "}
           Todo
         </button>
         <button
-          className="bg-gray-200 p-4 w-[100px] m-2 rounded-lg shadow-md"
+          className="bg-gray-200 p-4 m-2 rounded-lg shadow-md"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Home
+        </button>
+        <button
+          className="bg-gray-200 p-4 m-2 rounded-lg shadow-md"
           onClick={() => {
             navigate("/expenses");
           }}
