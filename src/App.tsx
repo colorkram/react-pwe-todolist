@@ -15,9 +15,10 @@ function App() {
   const [listArr, setListArr] = React.useState<any[]>([]); //สำหรับ show
   const [check, setCheck] = React.useState<boolean>(false);
   const [message, setMessage] = React.useState("");
+  const [confitm, setconfitm] = React.useState("");
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [isModalOpenHelp, setIsModalOpenHelp] = React.useState(false);
-  const [help,setHelp] = React.useState(false);
+  const [help, setHelp] = React.useState(false);
 
   // const local = getData();
 
@@ -84,9 +85,9 @@ function App() {
         return;
       }
       if (message === "help") {
-   setIsModalOpenHelp(true)
-   setMessage("");
-   setIsActive(true);
+        setIsModalOpenHelp(true);
+        setMessage("");
+        setIsActive(true);
         return;
       }
 
@@ -138,18 +139,14 @@ function App() {
       {TitleLocal ? (
         <div
           //   ref={parentRef}
-          className="fixed w-full h-full top-0 left-0 z-[9]  bg-gray-400 backdrop-blur-[8px] flex items-center justify-center shadow-[rgba(0,0,0,0.16)] duration-100 animate-fadeinfast"
+          className="fixed w-screen h-full top-0 left-0 z-[9]  bg-gray-400  backdrop-blur-[8px] flex items-center justify-center shadow-[rgba(0,0,0,0.16)] duration-100 animate-fadeinfast"
         >
-           <h1 className="text-black hidden md:flex fixed top-[300px]  z-0 font-bold text-gray-400">
-            {extractedWord} {`(${listArr.length})`}
-          </h1>
-
-          <h1 className="text-black fixed top-5 font-bold md:hidden  text-gray-400">
+          <h1 className=" fixed top-5 left-6 text-[24px] font-bold text-gray-100">
             {extractedWord} {`(${listArr.length})`}
           </h1>
           {isActive ? (
             <button
-              className="text-white fixed top-[55px] md:top-[20px] bg-green-500 hover:bg-green-700 px-4 py-2 rounded-md shadow-md"
+              className="text-white fixed top-[22px] right-5  bg-green-500 hover:bg-green-700 px-4 py-2 rounded-md shadow-md"
               onClick={() => {
                 setIsActive(false);
               }}
@@ -158,7 +155,7 @@ function App() {
             </button>
           ) : (
             <button
-              className="text-white fixed top-[55px] md:top-[20px] bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-md shadow-md"
+              className="text-white fixed top-[22px] right-5  bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-md shadow-md"
               onClick={() => {
                 setIsActive(true);
               }}
@@ -167,13 +164,11 @@ function App() {
             </button>
           )}
           {listArr.length == 0 ? (
-      <>
-            <div className=" ">
-             Your Soul and Your life was Empty
-            </div>
-      </>
+            <>
+              <div className=" ">Your Soul and Your life was Empty</div>
+            </>
           ) : (
-            <div className=" h-[600px] mt-[70px] overflow-y-scroll pb-[50px]">
+            <div className=" h-screen w-auto sm:w-[50%] mt-[180px] sm:mt-7 no-scrollbar overflow-y-scroll pb-[180px] sm:pb-[10px]">
               {isActive ? (
                 <div className="">
                   {listArr &&
@@ -184,6 +179,7 @@ function App() {
                           <button
                             onClick={() => {
                               setIsModalOpen(true);
+                              setconfitm(item.name);
                               setDeleteId(item.id);
                             }}
                             className="p-2 m-1 bg-red-500 text-white rounded"
@@ -193,10 +189,12 @@ function App() {
 
                           <div
                             key={item.id}
-                            className="bg-gray-200 p-2 m-1 rounded-md flex items-center w-[300px]  text-black"
+                            className="bg-gray-200 p-2 mx-1 my-1 no-scrollbar rounded-md flex items-center w-[300px] sm:w-[100%] text-black"
                           >
                             <div className="flex justify-between w-full">
-                              <p className="font-bold overflow-hidden">{item.name}</p>
+                              <p className="font-bold overflow-hidden">
+                                {item.name}
+                              </p>
                               <button
                                 // onClick={() => {setIsModalOpen(true),setDeleteId(item.id)}}
                                 onClick={() => {
@@ -230,16 +228,20 @@ function App() {
 
                           <div
                             key={item.id}
-                            className="bg-gray-200 p-2 m-1 rounded-md flex items-center w-[300px]  text-black"
+                            className={` ${
+                              item.status ? "bg-gray-200" : "bg-gray-300"
+                            } p-2 m-1 rounded-md flex items-center w-[300px]  text-black`}
                           >
                             <div className="flex justify-between w-full">
-                              <p className="font-bold overflow-hidden">{item.name}</p>
+                              <p className={`font-bold overflow-hidden}`}>
+                                {item.name}
+                              </p>
                               <button
                                 // onClick={() => {setIsModalOpen(true),setDeleteId(item.id)}}
                                 onClick={() => {
                                   handleChangeStatus(item.id, item.status);
                                 }}
-                                className=" w-[50px] bg-orange-500 text-white rounded select-none"
+                                className=" w-[50px] bg-orange-400 text-white rounded select-none"
                               >
                                 UNDO
                               </button>
@@ -257,19 +259,20 @@ function App() {
             className="fixed bottom-0 bg-white p-4 w-full flex items-center"
           >
             <input
-              className="text-black border border-gray-300 p-2 mr-2 flex-1"
+              className="text-black border border-gray-300 p-2  flex-1"
               type="text"
               value={message}
               onChange={handleChange}
               placeholder="Enter your Todo... or 'help' for option"
             />
-
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Submit
-            </button>
+            {message ? (
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 ml-2 rounded"
+              >
+                Submit
+              </button>
+            ) : null}
           </form>
           <Modal
             isOpen={isModalOpenHelp}
@@ -280,7 +283,6 @@ function App() {
               <p className="mt-4 text-black">help = show Option </p>
               <p className="mt-4 text-black">removeName = change Title Name </p>
               <p className="mt-4 text-black">deleteAll = remove All todo </p>
-        
             </div>
           </Modal>
 
@@ -291,6 +293,8 @@ function App() {
           >
             <div className="">
               <p className="mt-4 text-black">Are You Sure?</p>
+              <p className="text-black"> DELETE todo</p>
+              <p className="relative w-full top-6">{confitm}</p>
               <button
                 className="p-2 m-1 mt-[80px] bg-red-500 text-white rounded"
                 onClick={() => {
