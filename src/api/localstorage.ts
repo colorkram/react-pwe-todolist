@@ -89,3 +89,8 @@ export const getCash = () => {
 export const setCash = (data: string) => {
   localStorage.setItem(CASH, data);
 };
+
+export const removeCash = () => {
+  localStorage.removeItem(CASH);
+  // return window.location.href = "/";
+};

@@ -100,7 +100,7 @@ Exclude 10%: {" "}
         <button
           className="bg-gray-200 p-4 m-2 rounded-lg shadow-md"
           onClick={() => {
-            navigate("/expenses");
+            navigate("/exp");
           }}
         >
           Expenses
