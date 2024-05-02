@@ -27,8 +27,8 @@ function Main(): JSX.Element {
     <>
       <Nav />
       <div className="md:mt-[110px] z-1 bg-cover h-screen w-full bg-center bg-[url('https://res.cloudinary.com/db426bffp/image/upload/v1714553972/kram_ql6s02.jpg')] ">
-        <p className="text-[45px] md:text-[80px] text-center md:text-left pt-[360px] md:pt-[40px] md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
-          รวมพลังคือสำเร็จ
+        <p className="text-[35px] md:text-[70px] text-center md:text-left pt-[360px] md:pt-[40px] md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
+          Full Stack Developer
         </p>
         <div className="md:flex">
           <p className="text-[30px] md:text-left md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
@@ -48,15 +48,17 @@ function Main(): JSX.Element {
             Sorrawit Chaiyasil -
           </p></div>
         </div>
-        <p className="text-[30px] md:text-left md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
-        ผู้สมัคร ส.ส. รวมไทยสร้างเหี้ย
+        <p className="text-[30px] md:text-left md:pl-[50px] font-bold text-yellow-400 drop-shadow-md shadow-white">
+        <span className="text-white"> {'<>'} </span> I Love Programing <span className="text-white"> {'</>'} </span>
           </p>
         
       </div>
       <div className="md:mt-[110px] z-1 bg-cover h-screen w-full bg-center bg-[url('https://res.cloudinary.com/db426bffp/image/upload/v1714553972/kram_ql6s02.jpg')] ">
         
         <p className="text-[30px] md:text-left md:pl-[50px] pt-[300px] font-bold text-white drop-shadow-md shadow-white">
-        นัดแซ่บ!! ติดต่อ สีคราม 0864667137
+        โดเนท สีคราม 
+        พร้อมเพย์s
+        0864667137
           </p>
       </div>
 
