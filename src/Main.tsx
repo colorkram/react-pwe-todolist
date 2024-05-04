@@ -30,6 +30,7 @@ function Main(): JSX.Element {
   const [showParallax, setShowParallax] = useState(true);
   const [showParallaxs, setShowParallaxs] = useState(0);
   const [showPage2, setshowPage2] = useState(false);
+  const [showPage2Start, setShowPage2Start] = useState(false);
   // const [abc, setabc] = useState(0);
 
   useEffect(() => {
@@ -66,26 +67,36 @@ function Main(): JSX.Element {
   // useEffect(() => {
   //   setabc(showParallaxs+1)
   // }, [window.scrollY])
+  interface Logo {
+    name: string;
+    logo: string;
+    path: string;
+  }
   let feLogo = [
     {
       name: "ReactJS",
       logo: "https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png",
+      path: "https://react.dev",
     },
     {
       name: "VueJS",
       logo: "https://nuxt.com/assets/design-kit/icon-green.svg",
+      path: "https://vuejs.org",
     },
     {
       name: "HTML",
       logo: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+      path: "#",
     },
     {
       name: "CSS 3",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
+      path: "#",
     },
     {
       name: "JS",
       logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      path: "https://www.javascript.com",
     },
     ,
   ];
@@ -93,18 +104,22 @@ function Main(): JSX.Element {
     {
       name: "NodeJs",
       logo: "https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png",
+      path: "https://nodejs.org/",
     },
     {
       name: "NestJS",
       logo: "https://static-00.iconduck.com/assets.00/nestjs-icon-512x510-9nvpcyc3.png",
+      path: "https://nestjs.com/",
     },
     {
       name: "JS",
       logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      path: "https://www.javascript.com",
     },
     {
       name: "Aws S3",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/1712px-Amazon-S3-Logo.svg.png",
+      path: "https://aws.amazon.com/th/s3",
     },
     ,
     ,
@@ -113,24 +128,47 @@ function Main(): JSX.Element {
     {
       name: "PhotoShop",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png",
+      path: "https://www.adobe.com/",
     },
     {
       name: "Vegas Pro",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Vegas_Pro_19.svg/640px-Vegas_Pro_19.svg.png",
+      path: "https://www.vegascreativesoftware.com/us/vegas-pro",
     },
     {
       name: "Figma",
       logo: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
+      path: "https://www.figma.com",
     },
     {
       name: "MS",
       logo: "https://seeklogo.com/images/M/microsoft-office-logo-8B0EF31E09-seeklogo.com.png",
+      path: "https://www.office.com",
     },
     {
       name: "progest sql",
       logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Logo_PostgreSQL.png",
+      path: "https://www.postgresql.org/",
     },
   ];
+
+  const [showDiv, setShowDiv] = useState(false);
+
+  useEffect(() => {
+    // Set showDiv to true after component mounts
+    setShowDiv(true);
+  }, []);
+  useEffect(() => {
+    if (showPage2) {
+      setShowPage2Start(true);
+    } else {
+      setShowPage2Start(false);
+    }
+  }, [showPage2]);
+  const gotopaht = (link: any) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <>
       <Nav />
@@ -139,10 +177,14 @@ function Main(): JSX.Element {
         <div
           className={`md:mt-[110px] relative z-1 bg-cover h-screen w-full bg-center bg-[url('https://res.cloudinary.com/db426bffp/image/upload/v1714553972/kram_ql6s02.jpg')] `}
         >
-          <Parallax speed={-25} className=" z-0 flex md:hidden ">
+          <Parallax speed={-25} className={` z-0 flex md:hidden `}>
             {showParallax && (
               <div
-                className={`w-[131px] h-[131px] text-white absolute bottom-[10px] left-[50px] bg-cover  
+                className={`w-[131px] h-[131px] transition-opacity ${
+                  showDiv
+                    ? "opacity-100 duration-700"
+                    : "opacity-0 duration-700"
+                } text-white absolute bottom-[10px] left-[50px] bg-cover  
       ${
         showParallaxs == 1
           ? "bg-[url('https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png')]"
@@ -161,7 +203,11 @@ function Main(): JSX.Element {
           <div className="hidden md:flex">
             {showParallax && (
               <div
-                className={` text-white absolute bottom-[0px] md:bottom-[100px] left-[25px] md:left-[120px] bg-cover md:w-[250px] md:h-[250px]
+                className={` text-white absolute bottom-[0px] transition-opacity ${
+                  showDiv
+                    ? "opacity-100 duration-700"
+                    : "opacity-0 duration-700"
+                } md:bottom-[100px] left-[25px] md:left-[120px] bg-cover md:w-[250px] md:h-[250px]
       ${
         showParallaxs == 1
           ? "bg-[url('https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png')]"
@@ -179,14 +225,26 @@ function Main(): JSX.Element {
           </div>
 
           <Parallax speed={-25} className=" z-0">
-            <p className="hidden md:flex  md:text-[70px] text-center md:text-left  md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
+            <p
+              className={`hidden md:flex  transition-opacity ${
+                showDiv ? "opacity-100 duration-700" : "opacity-0 duration-700"
+              } md:text-[70px] text-center md:text-left  md:pl-[50px] font-bold text-white drop-shadow-md shadow-white  `}
+            >
               Full Stack Developer
             </p>
 
-            <p className="text-[35px] flex md:hidden md:text-[0px] text-center justify-center md:text-left pt-[360px] md:pt-[40px] md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
+            <p
+              className={` transition-opacity ${
+                showDiv ? "opacity-100 duration-700" : "opacity-0 duration-700"
+              } text-[35px] flex md:hidden md:text-[0px] text-center justify-center md:text-left pt-[360px] md:pt-[40px] md:pl-[50px] font-bold text-white drop-shadow-md shadow-white`}
+            >
               Full Stack Developer
             </p>
-            <div className="md:flex">
+            <div
+              className={`md:flex  transition-opacity ${
+                showDiv ? "opacity-100 duration-700" : "opacity-0 duration-700"
+              }`}
+            >
               <p className="text-[30px] md:text-left md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
                 สีคราม
               </p>
@@ -194,7 +252,13 @@ function Main(): JSX.Element {
                 สรวิชญ์ ไชยศิลป์
               </p>
             </div>
-            <div className="md:flex">
+            <div
+              className={`md:flex  transition-opacity ${
+                showDiv
+                  ? "opacity-100 duration-1000"
+                  : "opacity-0 duration-1000"
+              }`}
+            >
               <p className="text-[30px]  md:text-left md:pl-[50px] font-bold text-white drop-shadow-md shadow-white">
                 - SeeKram -
               </p>
@@ -202,13 +266,19 @@ function Main(): JSX.Element {
                 {" "}
                 <p className="text-[30px] md:text-[0px] md:text-left pr-2 md:pl-[7px] font-bold text-white drop-shadow-md shadow-white">
                   -
-                </p>{" "}
+                </p>
                 <p className="text-[30px] md:text-left md:pl-[7px] font-bold text-white drop-shadow-md shadow-white">
                   Sorrawit Chaiyasil -
                 </p>
               </div>
             </div>
-            <p className="text-[30px] md:text-left md:pl-[50px] font-bold text-yellow-400 drop-shadow-md shadow-white">
+            <p
+              className={`text-[30px] md:text-left md:pl-[50px] font-bold text-yellow-400 drop-shadow-md shadow-white  transition-opacity ${
+                showDiv
+                  ? "opacity-100 duration-1000"
+                  : "opacity-0 duration-1000"
+              }`}
+            >
               <span className="text-white"> {"<>"} </span> I ❤️ Programming{" "}
               <span className="text-white"> {"</>"} </span>
             </p>
@@ -220,61 +290,98 @@ function Main(): JSX.Element {
       <ParallaxProvider>
         <div
           id="secondElement"
-          className="md:mt-[110px] z-1 relative bg-cover h-screen md:h-[2700px] w-full  bg-[url('https://ttd-accounting.s3.ap-southeast-1.amazonaws.com/bg-temp/IMG_1187.JPG')] "
+          className="md:mt-[12px] z-1 relative bg-cover h-screen md:h-[2700px] w-full bg-[url('https://ttd-accounting.s3.ap-southeast-1.amazonaws.com/bg-temp/IMG_1187.JPG')] "
         >
           {!showPage2 ? (
-            <div className="text-[24px] md:text-[64px] h-[500px]  items-center mt-[100px] absolute w-full font-bold text-white drop-shadow-xl">
+            <div
+              className={`text-[24px] transition-opacity ${
+                showPage2
+                  ? "opacity-0 duration-1000"
+                  : "opacity-100 duration-1000"
+              }  md:text-[64px] h-[500px] items-center mt-[100px] absolute w-full font-bold text-white drop-shadow-xl`}
+            >
               My Computer & Other Skill
             </div>
           ) : null}
-          <Parallax speed={-25} className=" z-0 md:hidden">
-            <p className="text-[30px] md:text-left md:pl-[50px] pt-[300px] font-bold text-white drop-shadow-md shadow-white">
+          {/* <Parallax speed={-25} className=" z-0 md:hidden">
+            <p className="text-[30px] md:text-left md:pl-[50px]  pt-[300px] font-bold text-white drop-shadow-md shadow-white">
               โดเนท สีคราม พร้อมเพย์s 0864667137
             </p>
-          </Parallax>
+          </Parallax> */}
 
           {showPage2 ? (
-            <Parallax speed={-100} className=" hidden md:flex relative ">
-              <div className="text-[30px] h-[500px]  items-center absolute w-full mt-[300px] font-bold text-white drop-shadow-md shadow-white">
-                Frontend Skrill
+            <Parallax speed={-100} className=" flex relative ">
+              <div
+                className={`text-[30px] transition-opacity ${
+                  showPage2Start
+                    ? "opacity-100 duration-1000"
+                    : "opacity-0 duration-1000"
+                } items-center absolute w-full flex justify-center mt-[-50px] md:mt-[300px] font-bold text-white drop-shadow-md shadow-white`}
+              >
+                <p className="bg-black bg-opacity-40">Frontend Skrill</p>
               </div>
-              <div className="text-[30px] h-[500px] items-center flex justify-center w-full mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white">
+              <div
+                className={` md:h-[500px] transition-opacity ${
+                  showPage2Start
+                    ? "opacity-100 duration-1000"
+                    : "opacity-0 duration-1000"
+                } items-center flex justify-center w-full mt-[10px] md:mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white`}
+              >
                 {feLogo.map((item, index) => (
-                  <div className="mx-6">
-                    {" "}
+                  <div
+                    className="md:mx-6 hover:scale-110 duration-5000"
+                    onClick={() => {
+                      gotopaht(item?.path);
+                    }}
+                  >
                     <img
                       key={index}
                       src={item?.logo}
                       alt="react"
-                      width={200}
-                      height={200}
-                      className="mx-6 "
+                      className="mx-6 w-[50px] h-[50px] md:w-[200px]  md:h-[200px]"
                     />
-                    <p className="hover:scale-150"> {item?.name}</p>
+                    <p className="md:text-[30px] bg-black md:bg-transparent bg-opacity-10 ">{item?.name}</p>
                   </div>
                 ))}
               </div>
             </Parallax>
           ) : null}
-
+          {/* ------------------------------------------ PAGE 3 ----------------------------------------------------- */}
           {showPage2 ? (
-            <Parallax speed={-100} className=" hidden md:flex relative ">
-              <div className="text-[30px] h-[500px]  items-center absolute w-full mt-[350px] font-bold text-white drop-shadow-md shadow-white">
-                Backend Skrill
+            <Parallax
+              speed={-100}
+              className=" flex relative pointer-events-none"
+            >
+              <div
+                className={`text-[30px] h-[500px] transition-opacity ${
+                  showPage2Start
+                    ? "opacity-100 duration-1000"
+                    : "opacity-0 duration-1000"
+                } items-center absolute flex justify-center w-full mt-[0px] md:mt-[90px] font-bold text-white drop-shadow-md shadow-white`}
+              >
+                <p className="bg-black bg-opacity-40 ">Backend Skrill</p>
               </div>
-              <div className="text-[30px] h-[500px] items-center flex justify-center w-full mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white">
+              <div
+                className={` h-[500px] transition-opacity ${
+                  showPage2Start
+                    ? "opacity-100 duration-1000"
+                    : "opacity-0 duration-1000"
+                } items-center flex justify-center w-full mt-[80px] md:mt-[300px] pointer-events-auto mb-[100px] font-bold text-white drop-shadow-md shadow-white`}
+              >
                 {beLogo.map((item, index) => (
-                  <div className="mx-6">
-                    {" "}
+                  <div
+                    className="md:mx-6 hover:scale-110 duration-5000"
+                    onClick={() => {
+                      gotopaht(item?.path);
+                    }}
+                  >
                     <img
                       key={index}
                       src={item?.logo}
                       alt="react"
-                      width={200}
-                      height={200}
-                      className="mx-6 "
+                      className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
                     />
-                    <p className="hover:scale-150"> {item?.name}</p>
+                    <p className="md:text-[30px] bg-black md:bg-transparent bg-opacity-10  ">{item?.name}</p>
                   </div>
                 ))}
               </div>
@@ -282,34 +389,46 @@ function Main(): JSX.Element {
           ) : null}
 
           {showPage2 ? (
-            <Parallax speed={-100} className=" hidden md:flex relative ">
-              <div className="text-[30px] h-[500px]  items-center absolute w-full mt-[350px] font-bold text-white drop-shadow-md shadow-white">
-                Other Skrill
+            <Parallax
+              speed={-100}
+              className="flex relative pointer-events-none"
+            >
+             <div className={`text-[30px] transition-opacity ${
+                  showPage2Start
+                    ? "opacity-100 duration-1000"
+                    : "opacity-0 duration-1000"
+                }  h-[500px] items-center absolute flex justify-center  w-full mt-[-140px] md:mt-[100px] font-bold text-white drop-shadow-md shadow-white`}>
+                <p className="underline"> Other Skrill</p>
               </div>
-              <div className="text-[30px] h-[500px] items-center flex justify-center w-full mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white">
+              <div className={` h-[500px] transition-opacity ${
+                  showPage2Start
+                    ? "opacity-100 duration-1000"
+                    : "opacity-0 duration-1000"
+                } items-center flex justify-center pointer-events-auto w-full mt-[-50px] md:mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white`}>
                 {otherLogo.map((item, index) => (
-                  <div className="mx-6">
-                    {" "}
+                  <div
+                    className="md:mx-6 hover:scale-110 duration-5000"
+                    onClick={() => {
+                      gotopaht(item?.path);
+                    }}
+                  >
                     <img
                       key={index}
                       src={item?.logo}
                       alt="react"
-                      width={200}
-                      height={200}
-                      className="mx-6 "
+                      className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
                     />
-                    <p className="hover:scale-150"> {item?.name}</p>
+                    <p className="text-[14px] bg-black md:bg-transparent bg-opacity-10  md:text-[30px] ">{item?.name}</p>
                   </div>
                 ))}
               </div>
             </Parallax>
           ) : null}
-
         </div>
       </ParallaxProvider>
-      <div className="md:mt-[110px] z-1 relative bg-cover h-screen w-full bg-center bg-[url('https://ttd-accounting.s3.ap-southeast-1.amazonaws.com/bg-temp/IMG_20191210_211135.jpg')] ">
+      <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[url('https://ttd-accounting.s3.ap-southeast-1.amazonaws.com/bg-temp/IMG_20191210_211135.jpg')] ">
         <p className="text-[30px] md:text-left md:pl-[50px] pt-[300px] font-bold text-white drop-shadow-md shadow-white">
-          โดเนท สีคราม พร้อมเพย์s 0864667137
+          โดเนท สีคราม พร้อมเพย์ 0864667137
         </p>
       </div>
       {/* <div className="w-full h-screen bg-red-40">
