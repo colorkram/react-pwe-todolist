@@ -273,7 +273,7 @@ function Main(): JSX.Element {
               </div>
             </div>
             <p
-              className={`text-[30px] md:text-left md:pl-[50px] font-bold text-yellow-400 drop-shadow-md shadow-white  transition-opacity ${
+              className={`text-[26px] md:text-left md:pl-[50px] font-bold text-yellow-400 drop-shadow-md shadow-white  transition-opacity ${
                 showDiv
                   ? "opacity-100 duration-1000"
                   : "opacity-0 duration-1000"
@@ -294,13 +294,13 @@ function Main(): JSX.Element {
         >
           {!showPage2 ? (
             <div
-              className={`text-[24px] transition-opacity ${
+              className={`text-[28px] transition-opacity  ${
                 showPage2
                   ? "opacity-0 duration-1000"
                   : "opacity-100 duration-1000"
-              }  md:text-[64px] h-[500px] items-center mt-[100px] absolute w-full font-bold text-white drop-shadow-xl`}
+              }  md:text-[64px] mt-[50px] absolute w-full font-bold text-white drop-shadow-xl`}
             >
-              My Computer & Other Skill
+              <p className="text-right mr-6 underline font-bold">My Skills</p>
             </div>
           ) : null}
           {/* <Parallax speed={-25} className=" z-0 md:hidden">
@@ -308,7 +308,14 @@ function Main(): JSX.Element {
               โดเนท สีคราม พร้อมเพย์s 0864667137
             </p>
           </Parallax> */}
-
+          {!showPage2 ? (
+            <div className="w-full h-full relative">
+              <img
+                className="w-10 h-10 md:w-36 md:h-36 absolute top-[80px] md:top-[40px] md:left-[1000px] left-[180px] "
+                src="https://media3.giphy.com/media/vpGwCLsVHl3vTV46Wy/giphy.gif?cid=6c09b952jlkayzbmjwth5l8dm5k74kq5wdyspg3l7k5zbskz&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+              />
+            </div>
+          ) : null}
           {showPage2 ? (
             <Parallax speed={-100} className=" flex relative ">
               <div
@@ -318,10 +325,15 @@ function Main(): JSX.Element {
                     : "opacity-0 duration-1000"
                 } items-center absolute w-full flex justify-center mt-[-50px] md:mt-[300px] font-bold text-white drop-shadow-md shadow-white`}
               >
-                <p className="bg-black bg-opacity-40">Frontend Skrill</p>
+                <p className="font-bold text-black blur-sm  text-shadow ">
+                  Frontend Skill
+                </p>
+                <p className="absolute mr-2 font-bold text-white text-shadow ">
+                  Frontend Skill
+                </p>
               </div>
               <div
-                className={` md:h-[500px] transition-opacity ${
+                className={`md:h-[500px] transition-opacity ${
                   showPage2Start
                     ? "opacity-100 duration-1000"
                     : "opacity-0 duration-1000"
@@ -329,18 +341,24 @@ function Main(): JSX.Element {
               >
                 {feLogo.map((item, index) => (
                   <div
-                    className="md:mx-6 hover:scale-110 duration-5000"
+                    className={`md:mx-6 hover:scale-110 duration-5000`}
                     onClick={() => {
                       gotopaht(item?.path);
                     }}
                   >
-                    <img
-                      key={index}
-                      src={item?.logo}
-                      alt="react"
-                      className="mx-6 w-[50px] h-[50px] md:w-[200px]  md:h-[200px]"
-                    />
-                    <p className="md:text-[30px] bg-black md:bg-transparent bg-opacity-10 ">{item?.name}</p>
+                    <div className="flex flex-col items-center justify-center">
+                      {" "}
+                      {/* Added flex container */}
+                      <img
+                        key={index}
+                        src={item?.logo}
+                        alt="react"
+                        className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
+                      />
+                      <p className="md:text-[30px] bg-black md:bg-transparent bg-opacity-10">
+                        {item?.name}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -359,7 +377,12 @@ function Main(): JSX.Element {
                     : "opacity-0 duration-1000"
                 } items-center absolute flex justify-center w-full mt-[0px] md:mt-[90px] font-bold text-white drop-shadow-md shadow-white`}
               >
-                <p className="bg-black bg-opacity-40 ">Backend Skrill</p>
+                <p className="font-bold text-black blur-sm text-shadow ">
+                  Backend Skril
+                </p>
+                <p className="absolute  font-bold text-yellow-400 text-shadow ">
+                  Backend Skill
+                </p>
               </div>
               <div
                 className={` h-[500px] transition-opacity ${
@@ -375,13 +398,17 @@ function Main(): JSX.Element {
                       gotopaht(item?.path);
                     }}
                   >
-                    <img
-                      key={index}
-                      src={item?.logo}
-                      alt="react"
-                      className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
-                    />
-                    <p className="md:text-[30px] bg-black md:bg-transparent bg-opacity-10  ">{item?.name}</p>
+                    <div className="flex flex-col items-center justify-center">
+                      <img
+                        key={index}
+                        src={item?.logo}
+                        alt="react"
+                        className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
+                      />
+                      <p className="md:text-[30px] bg-black md:bg-transparent bg-opacity-10  ">
+                        {item?.name}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -393,18 +420,27 @@ function Main(): JSX.Element {
               speed={-100}
               className="flex relative pointer-events-none"
             >
-             <div className={`text-[30px] transition-opacity ${
+              <div
+                className={`text-[30px] transition-opacity ${
                   showPage2Start
                     ? "opacity-100 duration-1000"
                     : "opacity-0 duration-1000"
-                }  h-[500px] items-center absolute flex justify-center  w-full mt-[-140px] md:mt-[100px] font-bold text-white drop-shadow-md shadow-white`}>
-                <p className="underline"> Other Skrill</p>
+                }  h-[500px] items-center absolute flex justify-center  w-full mt-[-140px] md:mt-[100px] font-bold text-white drop-shadow-md shadow-white`}
+              >
+                <p className="font-bold text-black blur-sm text-shadow ">
+                  Other Skill
+                </p>
+                <p className="absolute mr-2 font-bold text-blue-400 text-shadow ">
+                  Other Skill
+                </p>
               </div>
-              <div className={` h-[500px] transition-opacity ${
+              <div
+                className={` h-[500px] transition-opacity ${
                   showPage2Start
                     ? "opacity-100 duration-1000"
                     : "opacity-0 duration-1000"
-                } items-center flex justify-center pointer-events-auto w-full mt-[-50px] md:mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white`}>
+                } items-center flex justify-center pointer-events-auto w-full mt-[-50px] md:mt-[300px] mb-[100px] font-bold text-white drop-shadow-md shadow-white`}
+              >
                 {otherLogo.map((item, index) => (
                   <div
                     className="md:mx-6 hover:scale-110 duration-5000"
@@ -412,13 +448,17 @@ function Main(): JSX.Element {
                       gotopaht(item?.path);
                     }}
                   >
-                    <img
-                      key={index}
-                      src={item?.logo}
-                      alt="react"
-                      className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
-                    />
-                    <p className="text-[14px] bg-black md:bg-transparent bg-opacity-10  md:text-[30px] ">{item?.name}</p>
+                    <div className="flex flex-col items-center justify-center">
+                      <img
+                        key={index}
+                        src={item?.logo}
+                        alt="react"
+                        className="mx-6 w-[50px] h-[50px] md:w-[200px] md:h-[200px]"
+                      />
+                      <p className="text-[14px] bg-black md:bg-transparent bg-opacity-10  md:text-[30px] ">
+                        {item?.name}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
