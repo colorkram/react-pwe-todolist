@@ -303,6 +303,7 @@ function Main(): JSX.Element {
               <img
                 className="w-10 h-10 md:w-36 md:h-36 absolute top-[80px] md:top-[40px] md:left-[1000px] left-[180px] "
                 src="https://media3.giphy.com/media/vpGwCLsVHl3vTV46Wy/giphy.gif?cid=6c09b952jlkayzbmjwth5l8dm5k74kq5wdyspg3l7k5zbskz&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+                alt='help'
               />
             </div>
           ) : null}
@@ -456,17 +457,24 @@ function Main(): JSX.Element {
         <p className="absolute top-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[50px] h-[50px] flex justify-center items-center">
           My First Project in <br /> TTD global
         </p>
-        <div className="flex justify-center  items-center absolute top-[-100px] md:top-0 md:relative h-[50%] overflow-hidden">
+        <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-0 md:relative min-h-screen">
+          <img
+            src="https://cdn.jsdelivr.net/gh/colorkram/images/page1.png"
+            alt="page1"
+            className="md:w-[800px] 2xl:w-[1000px] shadow-xl hover:scale-105 duration-150"
+          />
+        </div>
+        <div className="md:hidden flex justify-center items-center absolute top-[-30px] md:top-0 md:relative min-h-screen">
           <img
             src="https://cdn.jsdelivr.net/gh/colorkram/images/page1Edit.png"
             alt="page1"
-            className="md:w-[800px] 2xl:w-[1000px] shadow-xl hover:scale-105 duration-150"
+            className="w-[65%] shadow-xl hover:scale-105 duration-150"
           />
         </div>
         <p className=" cursor-pointer absolute md:bottom-[9%] bottom-[16%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
           Toos : Vue JS / Nuxt.js, Ant Design, Tailwind Css, Zustand (hook)	
         </p>
-        <p className=" cursor-pointer absolute bottom-[5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] flex justify-center items-center">
+        <p className=" cursor-pointer absolute bottom-[5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
           Visit Site :  <a href="https://ttdthailand.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-3">https://ttdthailand.com/</a>
         </p>
 
