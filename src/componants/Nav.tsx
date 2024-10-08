@@ -6,6 +6,11 @@ function Nav(): JSX.Element {
   const topFunction = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+
+  const handleNavigation = (sectionId: string) => {
+    // Update the URL hash to the section ID for smooth scrolling
+    window.location.hash = sectionId;
+  };
   
   return (
     <>
@@ -15,7 +20,9 @@ function Nav(): JSX.Element {
             <p className="text-[30px] font-bold  cursor-pointer " onClick={topFunction}>SeeKram</p>
             <HamburgerMenu/>
             <div className="hidden md:flex gap-[40px] mr-26 mt-2">
-              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2">
+              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
+              onClick={() => handleNavigation("about-me")}
+              >
                 About Me
               </p>
               <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2">

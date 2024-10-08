@@ -455,7 +455,7 @@ function Main(): JSX.Element {
       {/* page3 */}
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#fdf2e9]">
         <p className="w-full absolute top-[8%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex justify-center items-center">
-          My First Project in <br /> TTD global
+          My First Project at <br /> TTD global
         </p>
         <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-0 md:relative min-h-screen">
           <img
@@ -473,7 +473,7 @@ function Main(): JSX.Element {
         </div>
 
         <p className=" cursor-pointer absolute bottom-[16%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
-          Web homepage of <p className="text-[#00a18c] ml-2"> TTD GLOBAL</p> 
+          Web homepage of <p className="text-[#00a18c] ml-2"> TTD GLOBAL</p>
         </p>
 
         <p className=" cursor-pointer absolute  bottom-[11%] md:bottom-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
@@ -481,7 +481,7 @@ function Main(): JSX.Element {
         </p>
 
         <p className=" cursor-pointer absolute bottom-[5%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
-          Visit Site :  <a href="https://ttdthailand.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-3">https://ttdthailand.com/</a>
+          Visit Site :  <a href="https://ttdthailand.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-3">https://ttdthailand.com</a>
         </p>
 
 
@@ -494,8 +494,141 @@ function Main(): JSX.Element {
     className="absolute inset-0"
   ></iframe> */}
       </div>
+      {/* page4 */}
+      <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#d7dbdd]">
+        <p className="w-full absolute top-[8%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] hidden md:flex justify-center items-center">
+          My Favorite Project at  TTD global
+        </p>
+        <p className="w-full absolute top-[5%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] md:hidden flex justify-center items-center">
+          My Favorite Project at <br /> TTD globals
+        </p>
+        <div className="hidden md:flex justify-center items-center absolute top-[-0px] md:top-0 md:relative min-h-screen">
+          <img
+            src="https://cdn.jsdelivr.net/gh/colorkram/images/page4-1.png"
+            alt="page1"
+            className="md:w-[700px] 2xl:w-[900px]  duration-150 p-3"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/colorkram/images/page4-2.png"
+            alt="page4-1"
+            className="md:w-[700px] 2xl:w-[900px]  duration-150 p-3"
+          />
+        </div>
+        <div className="md:hidden flex justify-center items-center absolute top-[-60px] md:top-0 md:relative min-h-screen">
+          <img
+            src="https://cdn.jsdelivr.net/gh/colorkram/images/page2-1.png"
+            alt="page4-2"
+            className="w-[65%] shadow-xl hover:scale-105 duration-150 "
+          />
+        </div>
+
+        <p className=" cursor-pointer absolute bottom-[16%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full hidden md:flex justify-center items-center">
+
+          <p className="text-[#00a18c] mr-2 "> Accounting Project :
+          </p> A project for creating and summarizing company financial documents
+        </p>
+
+        <div className="cursor-pointer absolute bottom-[22%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full  md:hidden justify-center items-center">
+          <p className="text-[#00a18c] mr-2">Accounting Project</p>
+          <div>
+            A project for creating & summarizing <br /> company financial documents
+          </div>
+        </div>
 
 
+
+
+        <div className=" cursor-pointer absolute  bottom-[9%] md:bottom-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+          Front-end : NextJs, chartJs, Tailwind Css, Zustand (hook)
+        </div>
+
+        <p className=" cursor-pointer absolute bottom-[3%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+          Back-end : NestJS, TypeOrm, Maria DB, S3
+        </p>
+
+
+        {/* <iframe 
+    src="https://ttdthailand.com/" 
+    width="320px" 
+    height="520px" 
+    frameBorder="0" 
+    allowFullScreen
+    className="absolute inset-0"
+  ></iframe> */}
+      </div>
+      {/* page5 */}
+      <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#f0b27a]">
+        <p className="w-full absolute top-[8%] md:top-[6.5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex justify-center items-center">
+          The Lastest Project at  TTD global
+        </p>
+        <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-[-30px] md:relative min-h-screen">
+          <img
+            src="https://cdn.jsdelivr.net/gh/colorkram/images/page5.png"
+            alt="page5"
+            className="md:w-[650px] 2xl:w-[900px] shadow-xl hover:scale-105 duration-150"
+          />
+        </div>
+        <div className="md:hidden flex justify-center items-center absolute top-[-30px] md:top-0 md:relative min-h-screen">
+          <img
+            src="https://cdn.jsdelivr.net/gh/colorkram/images/page5-1.png"
+            alt="page1"
+            className="w-[65%] shadow-xl hover:scale-105 duration-150"
+          />
+        </div>
+
+        <p className=" cursor-pointer absolute bottom-[19%] md:bottom-[16%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+          <p className="text-[#ffff] mr-2"> One Aisa :</p>  E Commerce Site
+        </p>
+
+        <p className=" cursor-pointer absolute  bottom-[13%] md:bottom-[11%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+          Front-end : React/Next.js, Ant Design, Tailwind Css, Zustand (hook)
+        </p>
+        <p className=" cursor-pointer absolute  bottom-[6%] md:bottom-[6.5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+          Back-end : NestJS, TypeOrm, Posgest, Omise
+        </p>
+
+        <p className=" cursor-pointer absolute bottom-[1%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[16px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+          Visit Test Site :<a href="https://uat-fe.tourmasterth.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-1">https://uat-fe.tourmasterth.com</a>
+        </p>
+
+        {/* <iframe 
+    src="https://ttdthailand.com/" 
+    width="320px" 
+    height="520px" 
+    frameBorder="0" 
+    allowFullScreen
+    className="absolute inset-0"
+  ></iframe> */}
+      </div>
+      <div className="md:mt-[15px] p-2 md:p-6 z-1 relative bg-cover h-screen w-full bg-center bg-[url('https://cdn.jsdelivr.net/gh/colorkram/images/FB_IMG_1561520190479.jpg')]">
+        <div className="bg-gray-400 bg-opacity-75 w-full h-full p-6">
+          <p className="text-[30px] md:text-left font-bold drop-shadow-md text-white shadow-white md:mb-4">
+            Work Experience
+          </p>
+          <div className="text-black md:text-[24px] text-[20px] text-left space-y-2">
+            <p className="font-semibold">2023 - Present: FullStack Developer @TTD Global</p>
+            <ul className="list-disc md:ml-5 space-y-1 text-[18px]">
+              <li>Developing full-stack web app for a travel company.</li>
+              <li>Including customer web, team, and e-commerce platforms.</li>
+              <li>Using JavaScript, React, PostgreSQL, NestJS, and more.</li>
+              <li>Built a back-office web app to streamline team workflows.</li>
+              <li>Fixed bugs and problems efficiently and in a timely manner.</li>
+              <li>Training new internship developers.</li>
+            </ul>
+          </div>
+          <br/>
+          <div className="text-black md:text-[24px] text-[20px] md:text-left space-y-2">
+            <p className="font-semibold">2023 - Present: IT-SUPPORT  @FOOD STORY</p>
+            <ul className="list-disc ml-5 space-y-1 text-[18px]">
+              <li>Customer relations.</li>
+              <li>Customer Support (About Pos Service).</li>
+              <li>IT Coordinator (PC, Network and Printer).</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[url('https://ttd-accounting.s3.ap-southeast-1.amazonaws.com/bg-temp/IMG_20191210_211135.jpg')] ">
         <p className="text-[30px] md:text-left md:pl-[50px] pt-[300px] font-bold text-white drop-shadow-md shadow-white">
           โดเนท สีคราม พร้อมเพย์ 0864667137
