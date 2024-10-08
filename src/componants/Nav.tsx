@@ -16,13 +16,13 @@ function Nav(): JSX.Element {
             <HamburgerMenu/>
             <div className="hidden md:flex gap-[40px] mr-26 mt-2">
               <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2">
-                รู้จักสีคราม
+                About Me
               </p>
               <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2">
-                ผลงาน
+              Portfolio
               </p>
               <p className="w-[auto]text-[16px] cursor-pointer  hover:border-black hover:border-b-2">
-                ติดต่อสีคราม
+              Contact
               </p>
             </div>
           </div>

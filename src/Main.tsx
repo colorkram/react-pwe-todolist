@@ -454,14 +454,14 @@ function Main(): JSX.Element {
 
       {/* page3 */}
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#fdf2e9]">
-        <p className="absolute top-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[50px] h-[50px] flex justify-center items-center">
+        <p className="w-full absolute top-[8%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex justify-center items-center">
           My First Project in <br /> TTD global
         </p>
         <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-0 md:relative min-h-screen">
           <img
             src="https://cdn.jsdelivr.net/gh/colorkram/images/page1.png"
             alt="page1"
-            className="md:w-[800px] 2xl:w-[1000px] shadow-xl hover:scale-105 duration-150"
+            className="md:w-[700px] 2xl:w-[900px] shadow-xl hover:scale-105 duration-150"
           />
         </div>
         <div className="md:hidden flex justify-center items-center absolute top-[-30px] md:top-0 md:relative min-h-screen">
@@ -471,10 +471,16 @@ function Main(): JSX.Element {
             className="w-[65%] shadow-xl hover:scale-105 duration-150"
           />
         </div>
-        <p className=" cursor-pointer absolute md:bottom-[9%] bottom-[16%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
-          Toos : Vue JS / Nuxt.js, Ant Design, Tailwind Css, Zustand (hook)	
+
+        <p className=" cursor-pointer absolute bottom-[16%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+          Web homepage of <p className="text-[#00a18c] ml-2"> TTD GLOBAL</p> 
         </p>
-        <p className=" cursor-pointer absolute bottom-[5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+
+        <p className=" cursor-pointer absolute  bottom-[11%] md:bottom-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+          Tools : Vue JS / Nuxt.js, Ant Design, Tailwind Css, Zustand (hook)
+        </p>
+
+        <p className=" cursor-pointer absolute bottom-[5%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
           Visit Site :  <a href="https://ttdthailand.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-3">https://ttdthailand.com/</a>
         </p>
 
