@@ -169,6 +169,7 @@ function Main(): JSX.Element {
     window.open(link, "_blank");
   };
 
+
   return (
     <>
       <Nav />
@@ -616,10 +617,10 @@ function Main(): JSX.Element {
               <li>Training new internship developers.</li>
             </ul>
           </div>
-          <br/>
-          <div className="text-black md:text-[24px] text-[20px] md:text-left space-y-2">
-            <p className="font-semibold">2023 - Present: IT-SUPPORT  @FOOD STORY</p>
-            <ul className="list-disc ml-5 space-y-1 text-[18px]">
+          <br />
+          <div className="text-black md:text-[24px] text-[20px] text-left space-y-2">
+            <p className="font-semibold">2021 - 2022: IT-SUPPORT  @FOOD STORY</p>
+            <ul className="list-disc md:ml-5 space-y-1 text-[18px]">
               <li>Customer relations.</li>
               <li>Customer Support (About Pos Service).</li>
               <li>IT Coordinator (PC, Network and Printer).</li>
@@ -630,10 +631,21 @@ function Main(): JSX.Element {
 
       </div>
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[url('https://ttd-accounting.s3.ap-southeast-1.amazonaws.com/bg-temp/IMG_20191210_211135.jpg')] ">
-        <p className="text-[30px] md:text-left md:pl-[50px] pt-[300px] font-bold text-white drop-shadow-md shadow-white">
-          โดเนท สีคราม พร้อมเพย์ 0864667137
+        <p className="text-[30px] md:text-left pt-[350px] font-bold text-white drop-shadow-xl flex justify-center">
+          <p className="text-yellow-400">colorkram</p>@gmail.com
         </p>
+        <p className="text-[30px]  flex justify-center text-white"> 0864667137</p>
       </div>
+
+      <div className="md:mt-[15px] z-1 relative bg-cover md:h-[150px] h-[150px] w-full bg-center bg-white  justify-center items-center">
+        <p className="text-[18px] md:text-[30px] text-gray-700 pt-6 md:pt-2">ご訪問いただきありがとうございます。</p> 
+        <div className="w-full flex justify-between px-5 h-[10%]">
+        <p className="text-[18px] md:text-[20px] text-black d">Created at 2024-10-08</p>
+        <p className="text-[18px] md:text-[30px] text-black font-bold">Thank You for visiting</p> 
+        <p className="text-[18px] md:text-[20px] text-black d">Last deploy 2024-10-09</p>
+        </div>
+      </div>
+
       {/* <div className="w-full h-screen bg-red-40">
 
 </div> */}

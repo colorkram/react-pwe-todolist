@@ -6,6 +6,24 @@ const HamburgerMenu = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const topFunction = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  const middleFunction = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight / 4, // Scroll to the middle of the page
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+  
+  const bottomFunction = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight, // Scroll to the bottom of the document
+      behavior: "smooth", // Smooth scroll
+    });
+  };
   
 
   return (
@@ -44,28 +62,28 @@ const HamburgerMenu = () => {
  {/* Your mobile menu items go here */}
  <ul className="mt-2 bg-white rounded-md w-full">
    <li>
-     <a
-       href="#"
+     <p
+       onClick={topFunction}
        className="block text-gray-800 hover:text-white px-4 py-2 rounded-md"
      >
        Home
-     </a>
+     </p>
    </li>
    <li>
-     <a
-       href="#"
+     <p
+       onClick={middleFunction}
        className="block text-gray-800 hover:text-white px-4 py-2 rounded-md"
      >
        About
-     </a>
+     </p>
    </li>
    <li>
-     <a
-       href="#"
+     <p
+       onClick={bottomFunction}
        className="block text-gray-800 hover:text-white px-4 py-2 rounded-md"
      >
        Contact
-     </a>
+     </p>
    </li>
  </ul>
 </div>

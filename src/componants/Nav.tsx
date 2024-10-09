@@ -6,7 +6,20 @@ function Nav(): JSX.Element {
   const topFunction = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
+  const middleFunction = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight / 2.2, // Scroll to the middle of the page
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+  
+  const bottomFunction = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight, // Scroll to the bottom of the document
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+  
   const handleNavigation = (sectionId: string) => {
     // Update the URL hash to the section ID for smooth scrolling
     window.location.hash = sectionId;
@@ -21,14 +34,18 @@ function Nav(): JSX.Element {
             <HamburgerMenu/>
             <div className="hidden md:flex gap-[40px] mr-26 mt-2">
               <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
-              onClick={() => handleNavigation("about-me")}
+              onClick={topFunction}
               >
                 About Me
               </p>
-              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2">
+              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
+              onClick={middleFunction}
+              >
               Portfolio
               </p>
-              <p className="w-[auto]text-[16px] cursor-pointer  hover:border-black hover:border-b-2">
+              <p className="w-[auto]text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
+              onClick={bottomFunction}
+              >
               Contact
               </p>
             </div>
