@@ -302,7 +302,7 @@ function Main(): JSX.Element {
           {!showPage2 ? (
             <div className="w-full h-full relative">
               <img
-                className="w-10 h-10 md:w-36 md:h-36 absolute top-[80px] md:top-[40px] md:left-[1000px] left-[180px] "
+                className="w-10 h-10 md:w-36 md:h-36 absolute top-[80px] md:top-[200px] md:left-[500px] left-[180px] "
                 src="https://media3.giphy.com/media/vpGwCLsVHl3vTV46Wy/giphy.gif?cid=6c09b952jlkayzbmjwth5l8dm5k74kq5wdyspg3l7k5zbskz&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
                 alt='help'
               />
@@ -455,8 +455,11 @@ function Main(): JSX.Element {
 
       {/* page3 */}
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#fdf2e9]">
-        <p className="w-full absolute top-[8%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex justify-center items-center">
+        <p className="w-full absolute top-[8%] md:top-[90px] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] hidden 2xl:flex justify-center items-center">
           My First Project at <br /> TTD global
+        </p>
+        <p className="w-full absolute top-[8%] md:top-[90px] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex 2xl:hidden justify-center items-center">
+          My First Project at TTD global
         </p>
         <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-0 md:relative min-h-screen">
           <img
@@ -507,12 +510,12 @@ function Main(): JSX.Element {
           <img
             src="https://cdn.jsdelivr.net/gh/colorkram/images/page4-1.png"
             alt="page1"
-            className="md:w-[700px] 2xl:w-[900px]  duration-150 p-3"
+            className="w-[650px] lg:w-[700px] xl:w-[750px]  2xl:w-[800px]  duration-150 p-3"
           />
           <img
             src="https://cdn.jsdelivr.net/gh/colorkram/images/page4-2.png"
             alt="page4-1"
-            className="md:w-[700px] 2xl:w-[900px]  duration-150 p-3"
+            className="lg:w-[700px]  2xl:w-[800px] hidden 2xl:flex  duration-150 p-3"
           />
         </div>
         <div className="md:hidden flex justify-center items-center absolute top-[-60px] md:top-0 md:relative min-h-screen">
@@ -523,14 +526,14 @@ function Main(): JSX.Element {
           />
         </div>
 
-        <p className=" cursor-pointer absolute bottom-[16%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full hidden md:flex justify-center items-center">
+        <p className=" cursor-pointer absolute bottom-[16%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px] h-[50px] w-full hidden md:flex justify-center items-center">
 
           <p className="text-[#00a18c] mr-2 "> Accounting Project :
           </p> A project for creating and summarizing company financial documents
         </p>
 
-        <div className="cursor-pointer absolute bottom-[22%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full  md:hidden justify-center items-center">
-          <p className="text-[#00a18c] mr-2">Accounting Project</p>
+        <div className="cursor-pointer absolute bottom-[22%] md:bottom-[14%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px] h-[50px] w-full  md:hidden justify-center items-center">
+          <p className="text-[#00a18c] mr-2 ">Accounting Project</p>
           <div>
             A project for creating & summarizing <br /> company financial documents
           </div>
@@ -539,11 +542,11 @@ function Main(): JSX.Element {
 
 
 
-        <div className=" cursor-pointer absolute  bottom-[9%] md:bottom-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+        <div className=" cursor-pointer absolute  bottom-[9%] md:bottom-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow  w-full text-[17px] md:text-[20px] 2xl:text-[24px] h-[50px] flex justify-center items-center">
           Front-end : NextJs, chartJs, Tailwind Css, Zustand (hook)
         </div>
 
-        <p className=" cursor-pointer absolute bottom-[3%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+        <p className=" cursor-pointer absolute bottom-[3%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px] h-[50px] w-full flex justify-center items-center">
           Back-end : NestJS, TypeOrm, Maria DB, S3
         </p>
 
@@ -566,7 +569,7 @@ function Main(): JSX.Element {
           <img
             src="https://cdn.jsdelivr.net/gh/colorkram/images/page5.png"
             alt="page5"
-            className="md:w-[650px] 2xl:w-[900px] shadow-xl hover:scale-105 duration-150"
+            className="md:w-[650px] 2xl:w-[800px] shadow-xl hover:scale-105 duration-150"
           />
         </div>
         <div className="md:hidden flex justify-center items-center absolute top-[-30px] md:top-0 md:relative min-h-screen">
@@ -577,18 +580,18 @@ function Main(): JSX.Element {
           />
         </div>
 
-        <p className=" cursor-pointer absolute bottom-[19%] md:bottom-[16%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+        <p className=" cursor-pointer absolute bottom-[19%] md:bottom-[16%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[20px] 2xl:text-[24px] h-[50px] w-full flex justify-center items-center">
           <p className="text-[#ffff] mr-2"> One Aisa :</p>  E Commerce Site
         </p>
 
-        <p className=" cursor-pointer absolute  bottom-[13%] md:bottom-[11%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+        <p className=" cursor-pointer absolute  bottom-[13%] md:bottom-[11%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px]  w-full  h-[50px] flex justify-center items-center">
           Front-end : React/Next.js, Ant Design, Tailwind Css, Zustand (hook)
         </p>
-        <p className=" cursor-pointer absolute  bottom-[6%] md:bottom-[6.5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
+        <p className=" cursor-pointer absolute  bottom-[6%] md:bottom-[6.5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px]  w-full  h-[50px] flex justify-center items-center">
           Back-end : NestJS, TypeOrm, Posgest, Omise
         </p>
 
-        <p className=" cursor-pointer absolute bottom-[1%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[16px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
+        <p className=" cursor-pointer absolute bottom-[1%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px]  h-[50px] w-full flex justify-center items-center">
           Visit Test Site :<a href="https://uat-fe.tourmasterth.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-1">https://uat-fe.tourmasterth.com</a>
         </p>
 
