@@ -85,6 +85,14 @@ const HamburgerMenu = () => {
        Contact
      </p>
    </li>
+   <li>
+     <p
+       onClick={()=>{window.open('https://cdn.jsdelivr.net/gh/colorkram/images/portfolio.pdf')}}
+       className="block text-gray-800 hover:text-white px-4 py-2 rounded-md"
+     >
+       Download
+     </p>
+   </li>
  </ul>
 </div>
         </div>

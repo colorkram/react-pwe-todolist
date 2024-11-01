@@ -33,20 +33,25 @@ function Nav(): JSX.Element {
             <p className="text-[30px] font-bold  cursor-pointer " onClick={topFunction}>SeeKram</p>
             <HamburgerMenu/>
             <div className="hidden md:flex gap-[40px] mr-26 mt-2">
-              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
+              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2 font-semibold"
               onClick={topFunction}
               >
                 About Me
               </p>
-              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
+              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2 font-semibold"
               onClick={middleFunction}
               >
               Portfolio
               </p>
-              <p className="w-[auto]text-[16px] cursor-pointer  hover:border-black hover:border-b-2"
+              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2 font-semibold"
               onClick={bottomFunction}
               >
               Contact
+              </p>
+              <p className="w-[auto] text-[16px] cursor-pointer  hover:border-black hover:border-b-2 font-semibold"
+              onClick={()=>{window.open('https://cdn.jsdelivr.net/gh/colorkram/images/portfolio.pdf')}}
+              >
+              Download
               </p>
             </div>
           </div>

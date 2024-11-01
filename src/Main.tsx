@@ -455,10 +455,10 @@ function Main(): JSX.Element {
 
       {/* page3 */}
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#fdf2e9]">
-        <p className="w-full absolute top-[8%] md:top-[90px] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] hidden 2xl:flex justify-center items-center">
+        <p className="w-full absolute z-[2] top-[8%] md:top-[90px] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] hidden 2xl:flex justify-center items-center">
           My First Project at <br /> TTD global
         </p>
-        <p className="w-full absolute top-[8%] md:top-[90px] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex 2xl:hidden justify-center items-center">
+        <p className="w-full absolute top-[8%] z-[2] md:top-[90px] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex 2xl:hidden justify-center items-center">
           My First Project at TTD global
         </p>
         <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-0 md:relative min-h-screen">
@@ -481,7 +481,7 @@ function Main(): JSX.Element {
         </p>
 
         <p className=" cursor-pointer absolute  bottom-[11%] md:bottom-[8%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px]  w-full md:text-[24px] h-[50px] flex justify-center items-center">
-          Tools : Vue JS / Nuxt.js, Ant Design, Tailwind Css, Zustand (hook)
+          Tools : Vue JS / Nuxt.js, Ant Design, Tailwind Css, pinia (hook)
         </p>
 
         <p className=" cursor-pointer absolute bottom-[5%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[24px] h-[50px] w-full flex justify-center items-center">
@@ -500,11 +500,11 @@ function Main(): JSX.Element {
       </div>
       {/* page4 */}
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#d7dbdd]">
-        <p className="w-full absolute top-[8%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] hidden md:flex justify-center items-center">
+        <p className="w-full absolute z-[2] top-[8%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] hidden md:flex justify-center items-center">
           My Favorite Project at  TTD global
         </p>
         <p className="w-full absolute top-[5%] md:top-[12%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] md:hidden flex justify-center items-center">
-          My Favorite Project at <br /> TTD globals
+          My Favorite Project at <br /> TTD global
         </p>
         <div className="hidden md:flex justify-center items-center absolute top-[-0px] md:top-0 md:relative min-h-screen">
           <img
@@ -562,7 +562,7 @@ function Main(): JSX.Element {
       </div>
       {/* page5 */}
       <div className="md:mt-[15px] z-1 relative bg-cover h-screen w-full bg-center bg-[#f0b27a]">
-        <p className="w-full absolute top-[8%] md:top-[6.5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex justify-center items-center">
+        <p className="w-full absolute top-[8%] z-[2] md:top-[6.5%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[25px] md:text-[40px] 2xl:text-[45px] h-[50px] flex justify-center items-center">
           The Lastest Project at  TTD global
         </p>
         <div className="hidden md:flex justify-center items-center absolute top-[-100px] md:top-[-30px] md:relative min-h-screen">
@@ -581,7 +581,7 @@ function Main(): JSX.Element {
         </div>
 
         <p className=" cursor-pointer absolute bottom-[19%] md:bottom-[16%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[18px] md:text-[20px] 2xl:text-[24px] h-[50px] w-full flex justify-center items-center">
-          <p className="text-[#ffff] mr-2"> One Aisa :</p>  E Commerce Site
+          <p className="text-[#ffff] mr-2"> One Asia :</p>  E Commerce Site
         </p>
 
         <p className=" cursor-pointer absolute  bottom-[13%] md:bottom-[11%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px]  w-full  h-[50px] flex justify-center items-center">
@@ -591,8 +591,8 @@ function Main(): JSX.Element {
           Back-end : NestJS, TypeOrm, Posgest, Omise
         </p>
 
-        <p className=" cursor-pointer absolute bottom-[1%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[17px] md:text-[20px] 2xl:text-[24px]  h-[50px] w-full flex justify-center items-center">
-          Visit Test Site :<a href="https://uat-fe.tourmasterth.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-1">https://uat-fe.tourmasterth.com</a>
+        <p className=" cursor-pointer absolute bottom-[1%] md:bottom-[2%] left-1/2 transform -translate-x-1/2 font-bold text-shadow text-[16px] md:text-[20px] 2xl:text-[24px]  h-[50px] w-full flex justify-center items-center">
+          Visit Test Site :<a href="https://dev-www.oneasia.company/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline pl-1">https://dev-www.oneasia.company</a>
         </p>
 
         {/* <iframe 
@@ -604,7 +604,7 @@ function Main(): JSX.Element {
     className="absolute inset-0"
   ></iframe> */}
       </div>
-      <div className="md:mt-[15px] p-2 md:p-6 z-1 relative bg-cover h-screen w-full bg-center bg-[url('https://cdn.jsdelivr.net/gh/colorkram/images/FB_IMG_1561520190479.jpg')]">
+      <div className="md:mt-[15px] p-2 md:p-6 z-1 relative xl:bg-cover bg-fill h-auto xl:h-screen w-full bg-left-top bg-[url('https://cdn.jsdelivr.net/gh/colorkram/images/FB_IMG_1561520190479.jpg')]">
         <div className="bg-gray-400 bg-opacity-75 w-full h-full p-6">
           <p className="text-[30px] md:text-left font-bold drop-shadow-md text-white shadow-white md:mb-4">
             Work Experience
@@ -627,6 +627,22 @@ function Main(): JSX.Element {
               <li>Customer relations.</li>
               <li>Customer Support (About Pos Service).</li>
               <li>IT Coordinator (PC, Network and Printer).</li>
+            </ul>
+          </div>
+          <br />
+          <div className="text-black md:text-[24px] text-[20px] text-left space-y-2">
+            <p className="font-semibold">2019 - 2021: Japanese speaker @Twinkle Pet Hospital Thailand</p>
+            <ul className="list-disc md:ml-5 space-y-1 text-[18px]">
+              <li>Receptionist & Cashier.</li>
+              <li> Verterinary & Administrative assistant.</li>
+              <li>Contract Quarantine for send pet to japan.</li>
+            </ul>
+          </div>
+          <br />
+          <div className="text-black md:text-[24px] text-[20px] text-left space-y-2">
+            <p className="font-semibold">FREELANCE : 2024 - Support MpPos</p>
+            <ul className="list-disc md:ml-5 space-y-1 text-[18px]">
+              <li>Fix bug api & code react & prisma</li>
             </ul>
           </div>
         </div>
